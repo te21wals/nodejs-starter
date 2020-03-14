@@ -1,7 +1,7 @@
 {
     "name": "nodejs-starter",
-    "version": "",
-    "description": "",
+    "version": "1.0.0",
+    "description": "nodejs boilderplate setup with prettier and eslint",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,12 @@
         "eslint-plugin-prettier": "^3.1.2",
         "minimist": "^1.2.5",
         "node": "^12.16.1",
-        "prettier": "^1.19.1"
+        "prettier": "^1.19.1",
+        "husky": "^4.2.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint:fix"
+        }
     }
 }
